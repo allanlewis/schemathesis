@@ -4,7 +4,7 @@ _install_hypothesis_jsonschema_compatibility_shim()
 
 del _install_hypothesis_jsonschema_compatibility_shim
 
-from . import auths, checks, contrib, fixups, graphql, hooks, runner, serializers, targets
+from . import auths, checks, contrib, fixups, graphql, hooks, research, runner, serializers, targets
 from .constants import DataGenerationMethod, __version__
 from .models import Case
 from .specs import openapi
@@ -39,3 +39,5 @@ register_target = targets.register
 register_string_format = openapi.format
 
 auth.__dict__["register"] = auths.register
+
+research.apply()
